@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dokumen Negara 2026 — Kode Etik Militer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f1e8d4;
+  --paper-2: #e9dec6;
+  --ink: #1f1a12;
+  --ink-soft: #4a3f2a;
+  --ink-fade: #837155;
+  --maroon: #6b1a1a;
+  --maroon-dark: #4a1010;
+  --gold: #a8842c;
+  --gold-bright: #c9a345;
+  --s-approved: #2d4a6b;
+  --s-review: #a8842c;
+}
+html, body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Spectral', serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+body {
+  background-image:
+    radial-gradient(ellipse at 30% 20%, rgba(255, 250, 235, 0.6), transparent 60%),
+    radial-gradient(ellipse at 80% 80%, rgba(180, 140, 80, 0.15), transparent 60%),
+    linear-gradient(180deg, #f3ead6 0%, #ebdfc4 100%);
+  background-attachment: fixed;
+  -webkit-tap-highlight-color: transparent;
+}
+.grain {
+  position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 0.18;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+.font-serif { font-family: 'Cormorant Garamond', serif; }
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+/* === STRUKTUR DASAR === */
+.ribbon-gov {
+  background: linear-gradient(180deg, #4a1010 0%, #3a0c0c 100%);
+  border-bottom: 2px solid var(--gold);
+}
+.ribbon-gov-bottom {
+  background: linear-gradient(180deg, #3a0c0c 0%, #4a1010 100%);
+  border-top: 2px solid var(--gold);
+}
+.rule-double {
+  border-top: 3px double var(--maroon);
+  border-bottom: 1px solid var(--maroon);
+  height: 7px;
+}
+
+/* === HALAMAN DOKUMEN === */
+.page {
+  background: linear-gradient(180deg, #f5ecd8 0%, #ede0c2 100%);
+  position: relative;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.4) inset,
+    0 20px 50px -20px rgba(80, 50, 20, 0.4),
+    0 60px 100px -50px rgba(80, 50, 20, 0.3);
+}
+.page::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(140, 100, 50, 0.12), transparent 30%),
+    radial-gradient(ellipse at 100% 100%, rgba(140, 100, 50, 0.18), transparent 35%);
+}
+.page::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+/* === BAB === */
+.bab {
+  text-align: center;
+  margin: 3.5rem 0 2rem;
+  position: relative;
+}
+.bab-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+.bab-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  color: var(--maroon);
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0.25rem 0;
+}
+.bab-divider {
+  width: 80px; height: 2px;
+  background: var(--maroon);
+  margin: 1rem auto;
+  position: relative;
+}
+.bab-divider::before, .bab-divider::after {
+  content: ''; position: absolute; top: 50%;
+  width: 6px; height: 6px;
+  background: var(--maroon); border-radius: 50%;
+  transform: translateY(-50%);
+}
+.bab-divider::before { left: -14px; }
+.bab-divider::after { right: -14px; }
+.bab-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 1.35rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+/* === PASAL === */
+.pasal {
+  margin: 0 0 2rem 0;
+  position: relative;
+}
+.pasal-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+.pasal-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  color: var(--maroon);
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--maroon);
+  padding-bottom: 3px;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+.pasal-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin: 0.5rem 0 0.75rem;
+  font-style: italic;
+}
+.pasal-body {
+  text-align: justify;
+  line-height: 1.85;
+  font-size: 15.5px;
+  margin-bottom: 0.5rem;
+}
+.ayat {
+  display: flex;
+  gap: 10px;
+  margin: 0.6rem 0;
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 15px;
+}
+.ayat-num {
+  color: var(--maroon);
+  font-weight: 600;
+  min-width: 1.8em;
+  flex-shrink: 0;
+}
+.dropcap::first-letter {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 3.8em;
+  float: left;
+  line-height: 0.85;
+  margin: 0.05em 0.1em -0.05em 0;
+  color: var(--maroon);
+}
+
+/* === BADGE VERSI === */
+.v-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(107,26,26,0.3);
+  padding: 2px 6px;
+  background: rgba(241, 232, 212, 0.5);
+}
+.v-num { color: var(--ink-fade); }
+.v-status { font-weight: 700; padding: 0 3px; color: var(--s-approved); }
+.v-time { color: var(--ink-fade); font-style: italic; }
+
+/* === CATATAN AMANDEMEN === */
+.amend-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, rgba(107,26,26,0.06), transparent);
+  border-left: 3px solid var(--maroon);
+  padding: 6px 10px;
+  margin: 0.75rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--ink-soft);
+}
+.amend-tag {
+  background: var(--maroon);
+  color: var(--paper);
+  padding: 1px 6px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 9px;
+}
+
+/* === PANEL SEKJEN === */
+.sekjen-panel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+  margin-top: 1.25rem;
+  padding: 10px 14px;
+  background: linear-gradient(180deg, rgba(107,26,26,0.05), rgba(107,26,26,0.01));
+  border-top: 1px dashed rgba(107, 26, 26, 0.3);
+  border-bottom: 1px dashed rgba(107, 26, 26, 0.3);
+  position: relative;
+}
+.sekjen-panel::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: 14px;
+  width: 50px; height: 2px;
+  background: var(--maroon);
+}
+.sk-stamp {
+  width: 38px; height: 38px;
+  border: 2px solid var(--maroon);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; font-size: 12px;
+  color: var(--maroon);
+  background: rgba(241, 232, 212, 0.6);
+  position: relative; flex-shrink: 0;
+}
+.sk-stamp::after {
+  content: ''; position: absolute; inset: 2px;
+  border: 1px solid rgba(107,26,26,0.3);
+  border-radius: 50%;
+}
+.sk-info { line-height: 1.45; min-width: 0; }
+.sk-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px; color: var(--ink-fade);
+  letter-spacing: 0.12em; text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.sk-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; color: var(--maroon);
+  font-size: 14px; line-height: 1.2;
+}
+.sk-meta {
+  font-size: 9.5px; color: var(--ink-soft);
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 2px;
+}
+.sk-meta .sk-time { color: var(--s-approved); font-weight: 700; }
+.sk-meta .sk-nip { color: var(--ink-fade); }
+.sk-verify {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 2px;
+  padding-left: 12px;
+  border-left: 1px dashed rgba(107, 26, 26, 0.2);
+}
+.sk-check { color: var(--s-approved); font-size: 18px; line-height: 1; font-weight: 700; }
+.sk-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 7.5px; color: var(--s-approved);
+  letter-spacing: 0.1em; font-weight: 700;
+}
+
+/* === SIDEBAR === */
+.sidebar-card {
+  background: linear-gradient(180deg, #f5ecd8 0%, #ede0c2 100%);
+  border: 1px solid rgba(107, 26, 26, 0.2);
+  position: relative;
+}
+.sidebar-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  color: var(--maroon);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--maroon);
+  padding-bottom: 5px;
+  margin-bottom: 8px;
+}
+.stat-row {
+  display: flex; justify-content: space-between;
+  font-size: 11px; padding: 4px 0;
+  border-bottom: 1px dashed rgba(107, 26, 26, 0.12);
+  font-family: 'JetBrains Mono', monospace;
+}
+.stat-row:last-child { border-bottom: none; }
+.stat-label { color: var(--ink-fade); }
+.stat-val { color: var(--maroon); font-weight: 700; }
+
+.sk-roster-item {
+  display: grid; grid-template-columns: 28px 1fr; gap: 8px;
+  align-items: center; padding: 5px 0;
+  border-bottom: 1px dashed rgba(107,26,26,0.1);
+  font-size: 11px;
+}
+.sk-roster-item:last-child { border-bottom: none; }
+.sk-roster-stamp {
+  width: 26px; height: 26px;
+  border: 1.5px solid var(--maroon);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; font-size: 9px;
+  color: var(--maroon);
+  background: rgba(241, 232, 212, 0.6);
+}
+.sk-roster-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; color: var(--ink);
+  font-size: 11px; line-height: 1.2;
+}
+.sk-roster-role {
+  font-size: 9px; color: var(--ink-fade);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* === EKSEKUTIF === */
+.exec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 700px;
+  margin: 1.5rem auto;
+}
+.exec-card {
+  background: linear-gradient(180deg, rgba(107,26,26,0.06), rgba(107,26,26,0.01));
+  border: 1px solid rgba(107,26,26,0.3);
+  padding: 12px 8px 10px;
+  text-align: center;
+  position: relative;
+}
+.exec-card::before {
+  content: ''; position: absolute;
+  top: 3px; left: 3px; right: 3px; bottom: 3px;
+  border: 1px dashed rgba(107,26,26,0.15);
+  pointer-events: none;
+}
+.exec-card.mendagri {
+  border-color: rgba(168,132,44,0.4);
+  background: linear-gradient(180deg, rgba(168,132,44,0.08), rgba(107,26,26,0.01));
+}
+.exec-card.mendagri::before { border-color: rgba(168,132,44,0.2); }
+.exec-role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px; color: var(--ink-fade);
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.exec-period {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: var(--maroon); font-weight: 700;
+  margin-top: 2px;
+}
+.exec-card.mendagri .exec-period { color: var(--gold); }
+.exec-stamp {
+  width: 44px; height: 44px;
+  border: 2px solid var(--maroon);
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; font-size: 14px;
+  color: var(--maroon);
+  background: rgba(241,232,212,0.7);
+  margin: 6px 0 4px;
+  position: relative;
+}
+.exec-card.mendagri .exec-stamp { border-color: var(--gold); color: var(--gold); }
+.exec-stamp::after {
+  content: ''; position: absolute; inset: 3px;
+  border: 1px solid rgba(107,26,26,0.3); border-radius: 50%;
+}
+.exec-card.mendagri .exec-stamp::after { border-color: rgba(168,132,44,0.3); }
+.exec-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; color: var(--ink);
+  font-size: 13px; line-height: 1.15;
+}
+.exec-subtitle {
+  font-size: 8.5px; color: var(--ink-fade);
+  font-style: italic; margin-top: 2px;
+}
+
+/* === DJUANDA === */
+.djuanda-panel {
+  background: linear-gradient(135deg,
+    rgba(168, 132, 44, 0.10) 0%,
+    rgba(241, 232, 212, 0.4) 30%,
+    rgba(107, 26, 26, 0.03) 60%,
+    rgba(168, 132, 44, 0.10) 100%);
+  border: 2px double var(--gold);
+  padding: 24px 20px;
+  margin: 2rem auto;
+  max-width: 640px;
+  text-align: center;
+  position: relative;
+}
+.djuanda-panel::before {
+  content: ''; position: absolute;
+  top: 6px; left: 6px; right: 6px; bottom: 6px;
+  border: 1px solid var(--gold);
+  pointer-events: none;
+}
+.djuanda-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic; font-weight: 500;
+  color: var(--gold); font-size: 10px;
+  letter-spacing: 0.25em; text-transform: uppercase;
+}
+.djuanda-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; color: var(--maroon);
+  font-size: 1.8rem; margin: 4px 0 2px;
+  letter-spacing: 0.04em;
+}
+.djuanda-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: var(--ink-fade);
+  letter-spacing: 0.12em; text-transform: uppercase;
+}
+.djuanda-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic; font-size: 15px;
+  color: var(--ink-soft);
+  margin: 14px auto; max-width: 540px;
+  line-height: 1.65;
+  border-left: 2px solid var(--gold);
+  border-right: 2px solid var(--gold);
+  padding: 4px 16px;
+}
+.djuanda-declarer {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; color: var(--ink);
+  font-size: 16px;
+}
+.djuanda-declarer-role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; color: var(--ink-fade);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-top: 2px;
+}
+.djuanda-divider {
+  width: 50%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 16px auto; position: relative;
+}
+.djuanda-divider::after {
+  content: '◆'; position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--paper); padding: 0 8px;
+  color: var(--gold); font-size: 9px;
+}
+.custodian-box {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: rgba(241, 232, 212, 0.6);
+  border: 1px solid var(--maroon);
+  padding: 8px 14px;
+  position: relative;
+}
+.custodian-box::before {
+  content: ''; position: absolute;
+  top: 2px; left: 2px; right: 2px; bottom: 2px;
+  border: 1px dashed rgba(107,26,26,0.2);
+  pointer-events: none;
+}
+.custodian-stamp {
+  width: 36px; height: 36px;
+  border: 2px solid var(--maroon);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; font-size: 11px;
+  color: var(--maroon);
+  background: rgba(241,232,212,0.8);
+  position: relative;
+}
+.custodian-stamp::after {
+  content: ''; position: absolute; inset: 3px;
+  border: 1px solid rgba(107,26,26,0.3); border-radius: 50%;
+}
+.custodian-info { text-align: left; }
+.custodian-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; color: var(--maroon);
+  font-size: 14px; line-height: 1.2;
+}
+.custodian-role-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px; color: var(--ink-soft);
+  letter-spacing: 0.04em; margin-top: 2px;
+}
+.custodian-period {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px; color: var(--gold); font-weight: 700;
+  margin-top: 1px;
+}
+.custodian-verify {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 1px;
+  padding-left: 10px;
+  border-left: 1px dashed rgba(107, 26, 26, 0.2);
+}
+.custodian-check { color: var(--gold); font-size: 16px; font-weight: 700; }
+.custodian-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 7px; color: var(--gold);
+  letter-spacing: 0.1em; font-weight: 700;
+}
+
+/* === RESPONSIF === */
+@media (max-width: 768px) {
+  .exec-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .djuanda-panel { margin: 1.5rem 0.5rem; padding: 18px 12px; }
+  .custodian-box { flex-direction: column; text-align: center; gap: 8px; }
+  .custodian-info { text-align: center; }
+  .custodian-verify { border-left: none; border-top: 1px dashed rgba(107,26,26,0.2); padding: 6px 0 0 0; flex-direction: row; }
+  .sekjen-panel { grid-template-columns: auto 1fr; }
+  .sk-verify { grid-column: 1 / -1; flex-direction: row; justify-content: center; padding: 6px 0 0 0; border-left: none; border-top: 1px dashed rgba(107,26,26,0.2); }
+}
+@media (max-width: 520px) {
+  .pasal-body { font-size: 14px; }
+  .ayat { font-size: 13px; }
+  .bab-num { font-size: 2.2rem; }
+  .bab-title { font-size: 1.1rem; }
+  .pasal-num { font-size: 1.2rem; }
+  .dropcap::first-letter { font-size: 3em; }
+}
+@media print {
+  .grain, .ribbon-gov, .ribbon-gov-bottom { display: none; }
+  .page { box-shadow: none; }
+  body { background: white; }
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<!-- Pita atas -->
+<div class="ribbon-gov text-[#e9dec6]">
+  <div class="max-w-5xl mx-auto px-6 py-2 flex flex-col sm:flex-row items-center justify-between gap-1 text-[10px] font-mono tracking-widest uppercase">
+    <span>Lembaran Negara R.I. Tahun 2026 Nomor 069</span>
+    <span class="text-[#c9a345]">Sekretariat Negara · Sulawesi</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="max-w-5xl mx-auto px-6 py-10 md:py-14 relative z-10">
+  <div class="text-center">
+    <svg class="mx-auto mb-4" width="68" height="68" viewBox="0 0 100 100" style="filter: drop-shadow(0 3px 8px rgba(107, 26, 26, 0.3));">
+      <polygon points="50,5 61,38 96,38 68,58 79,92 50,72 21,92 32,58 4,38 39,38" fill="#6b1a1a" stroke="#a8842c" stroke-width="1.4"/>
+      <circle cx="50" cy="50" r="14" fill="#f1e8d4" stroke="#a8842c" stroke-width="0.9"/>
+      <text x="50" y="55.5" text-anchor="middle" font-family="Cormorant Garamond" font-weight="700" font-size="13" fill="#6b1a1a">UU</text>
+    </svg>
+    <div class="font-serif italic text-[#837155] text-sm tracking-[0.3em] uppercase mb-1">Dokumen Negara · Tahun 2026</div>
+    <div class="font-mono text-xs tracking-[0.25em] text-[#a8842c] mb-3">UU No. 6 TAHUN 2026</div>
+    <h1 class="font-serif font-bold text-4xl md:text-5xl text-[#6b1a1a] mt-2 mb-3 leading-[1.05]">KODE ETIK<br>MILITER</h1>
+    <div class="text-sm text-[#4a3f2a] mb-5 max-w-2xl mx-auto">
+      Protokol <span class="font-mono text-[#6b1a1a] font-semibold">0.0.6</span> · <span class="font-mono text-[#6b1a1a] font-semibold">0.6.9</span> · <span class="font-mono text-[#6b1a1a] font-semibold">0.K.7</span> · <span class="font-mono text-[#6b1a1a] font-semibold">0.G.9</span> — beserta ketentuan gencatan senjata dan Sistem Pemeliharaan Tingkatan Nasionalisme.
+    </div>
+    <div class="rule-double max-w-sm mx-auto mb-5"></div>
+    <div class="font-serif italic text-[#4a3f2a] text-sm">Disahkan 6 Juni 2026 · Sekretariat Negara · Sulawesi</div>
+  </div>
+
+  <!-- Kepemimpinan Eksekutif -->
+  <div class="exec-grid">
+    <div class="exec-card">
+      <div class="exec-role">Presiden R.I.</div>
+      <div class="exec-period">2024–2029</div>
+      <div class="exec-stamp">PS</div>
+      <div class="exec-name">Prabowo Subianto</div>
+      <div class="exec-subtitle">Presiden ke-8 R.I.</div>
+    </div>
+    <div class="exec-card">
+      <div class="exec-role">Wakil Presiden R.I.</div>
+      <div class="exec-period">2024–2029</div>
+      <div class="exec-stamp">GR</div>
+      <div class="exec-name">Gibran Rakabuming Raka</div>
+      <div class="exec-subtitle">Wakil Presiden R.I.</div>
+    </div>
+    <div class="exec-card mendagri">
+      <div class="exec-role">Menteri Dalam Negeri</div>
+      <div class="exec-period">2024–2029</div>
+      <div class="exec-stamp">TiK</div>
+      <div class="exec-name">Tito Karnavian</div>
+      <div class="exec-subtitle">Pemelihara Deklarasi Djuanda</div>
+    </div>
+  </div>
+
+  <!-- Deklarasi Djuanda -->
+  <div class="djuanda-panel">
+    <div class="djuanda-label">Deklarasi Bersejarah · Wawasan Nusantara</div>
+    <div class="djuanda-title">DEKLARASI DJUANDA</div>
+    <div class="djuanda-date">13 Desember 1957 · Jakarta</div>
+    <div class="djuanda-quote">Bahwa segala perairan di sekitar, di antara, dan di dalam kepulauan Indonesia, tanpa memandang luasnya atau lebarnya, adalah bagian-bagian mutlak dari wilayah daratan Indonesia yang berdaulat.</div>
+    <div class="djuanda-declarer">Djuanda Kartawidjaja</div>
+    <div class="djuanda-declarer-role">Perdana Menteri Republik Indonesia</div>
+    <div class="djuanda-divider"></div>
+    <div class="custodian-box">
+      <div class="custodian-stamp">TiK</div>
+      <div class="custodian-info">
+        <div class="custodian-name">Tito Karnavian</div>
+        <div class="custodian-role-text">Mendagri · Pemelihara Deklarasi Djuanda</div>
+        <div class="custodian-period">2024–2029</div>
+      </div>
+      <div class="custodian-verify">
+        <span class="custodian-check">✓</span>
+        <span class="custodian-status">TERVERIFIKASI</span>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<!-- DOKUMEN UTAMA -->
+<main class="max-w-5xl mx-auto px-6 pb-12 relative z-10">
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <!-- Badan dokumen -->
+    <div class="md:col-span-2">
+      <div class="page px-6 md:px-10 py-8 md:py-10">
+
+        <div class="amend-note mb-6">
+          <span class="amend-tag">AMANDEMEN</span>
+          <span>Dokumen ini diperbarui secara berkelanjutan oleh Sekretariat Negara</span>
+        </div>
+
+        <!-- BAB I -->
+        <div class="bab">
+          <div class="bab-label">Bab</div>
+          <div class="bab-num">I</div>
+          <div class="bab-divider"></div>
+          <div class="bab-title">Ketentuan Umum</div>
+        </div>
+
+        <div class="pasal">
+          <div class="pasal-header">
+            <div class="pasal-num">Pasal 1</div>
+            <span class="v-badge"><span class="v-num">v2.3</span><span class="v-status">DIPERBARUI</span><span class="v-time">14 mnt lalu</span></span>
+          </div>
+          <p class="pasal-body dropcap mb-3">Dalam Undang-Undang ini yang dimaksud dengan:</p>
+          <div class="ayat"><span class="ayat-num">1.</span><span><i>Kode Etik Militer</i> adalah norma, kaidah, dan aturan tertulis yang mengatur perilaku prajurit yang berlaku secara hierarkis;</span></div>
+          <div class="ayat"><span class="ayat-num">2.</span><span><i>Protokol Taktis 0.0.6</i> adalah doktrin etika militer yang berlaku bagi prajurit pada level unit kecil;</span></div>
+          <div class="ayat"><span class="ayat-num">3.</span><span><i>Protokol Strategis 0.6.9</i> adalah doktrin etika militer yang berlaku bagi perwira tinggi pada level komando strategis;</span></div>
+          <div class="ayat"><span class="ayat-num">4.</span><span><i>Protokol Kubu 0.K.7</i> adalah doktrin pertahanan statis yang mengatur pertahanan kubu, instalasi militer, dan pangkalan;</span></div>
+          <div class="ayat"><span class="ayat-num">5.</span><span><i>Protokol Gegas 0.G.9</i> adalah doktrin tindakan tegas terhadap gangguan keamanan yang melebihi kapasitas kepolisian;</span></div>
+          <div class="ayat"><span class="ayat-num">6.</span><span><i>Gencatan Senjata</i> adalah penghentian sementara kegiatan militer berdasarkan kesepakatan para pihak;</span></div>
+          <div class="ayat"><span class="ayat-num">7.</span><span><i>Sistem Pemeliharaan Tingkatan Nasionalisme (SPTN)</i> adalah kerangka evaluasi kesadaran berbangsa dan bernegara yang diterapkan secara bertingkat.</span></div>
+          <div class="sekjen-panel">
+            <div class="sk-stamp">SS</div>
+            <div class="sk-info">
+              <div class="sk-label">Diverifikasi oleh Sekretaris Jenderal</div>
+              <div class="sk-name">Drs. H. Soeprapto Sukardi, M.Si.</div>
+              <div class="sk-meta">Sekjen Utama · <span class="sk-nip">NIP 19551221 198203 1 001</span> · <span class="sk-time">06.06.2026</span></div>
+            </div>
+            <div class="sk-verify"><span class="sk-check">✓</span><span class="sk-status">TERVERIFIKASI</span></div>
+          </div>
+        </div>
+
+        <!-- BAB III -->
+        <div class="bab">
+          <div class="bab-label">Bab</div>
+          <div class="bab-num">III</div>
+          <div class="bab-divider"></div>
+          <div class="bab-title">Protokol Taktis 0.0.6</div>
+        </div>
+
+        <div class="pasal">
+          <div class="pasal-header">
+            <div class="pasal-num">Pasal 5</div>
+            <span class="v-badge"><span class="v-num">v1.4</span><span class="v-status">DIPERBARUI</span><span class="v-time">2 jam lalu</span></span>
+          </div>
+          <div class="pasal-title">Proporsionalitas Kekuatan Lapangan</div>
+          <div class="amend-note"><span class="amend-tag">UBAH</span><span>14:21 · ayat (1) direvisi</span></div>
+          <div class="ayat"><span class="ayat-num">(1)</span><span>Penggunaan senjata dan kekuatan wajib proporsional terhadap tingkat ancaman, dengan kewajiban dokumentasi setiap penggunaan kekuatan dalam log unit.</span></div>
+          <div class="ayat"><span class="ayat-num">(2)</span><span>Eskalasi paksa yang melebihi level ancaman dikategorikan sebagai pelanggaran berat.</span></div>
+          <div class="ayat"><span class="ayat-num">(3)</span><span>Kerangka <i>use of force continuum</i> sebagaimana diatur dalam Lampiran menjadi acuan resmi.</span></div>
+          <div class="sekjen-panel">
+            <div class="sk-stamp">BS</div>
+            <div class="sk-info">
+              <div class="sk-label">Diverifikasi oleh Sekretaris Jenderal</div>
+              <div class="sk-name">Letkol. Drs. Bambang Sutrisno, M.Si.</div>
+              <div class="sk-meta">Sekjen Bidang Taktis · <span class="sk-nip">NIP 19680312 199403 1 003</span> · <span class="sk-time">14:21</span></div>
+            </div>
+            <div class="sk-verify"><span class="sk-check">✓</span><span class="sk-status">TERVERIFIKASI</span></div>
+          </div>
+        </div>
+
+        <!-- BAB V -->
+        <div class="bab">
+          <div class="bab-label">Bab</div>
+          <div class="bab-num">V</div>
+          <div class="bab-divider"></div>
+          <div class="bab-title">Protokol Kubu 0.K.7</div>
+        </div>
+
+        <div class="pasal">
+          <div class="pasal-header">
+            <div class="pasal-num">Pasal 21</div>
+            <span class="v-badge"><span class="v-num">v1.1</span><span class="v-status">DIPERBARUI</span><span class="v-time">8 mnt lalu</span></span>
+          </div>
+          <div class="pasal-title">Status Siaga Kubu</div>
+          <div class="amend-note"><span class="amend-tag">TAMBAH</span><span>14:24 · ayat (4) ditambahkan</span></div>
+          <div class="ayat"><span class="ayat-num">(1)</span><span>Status kawasan pertahanan dibedakan menjadi empat tingkat: <b>HIJAU, KUNING, MERAH,</b> dan <b>SIAGA TOTAL</b>.</span></div>
+          <div class="ayat"><span class="ayat-num">(2)</span><span>Penjelasan masing-masing tingkat sebagaimana diatur dalam Lampiran.</span></div>
+          <div class="ayat"><span class="ayat-num">(3)</span><span>Pada tingkat SIAGA TOTAL, kawasan dinyatakan sebagai zona militer tertutup.</span></div>
+          <div class="ayat"><span class="ayat-num">(4)</span><span>Pada tingkat MERAH dan SIAGA TOTAL, persiapan evakuasi wajib dilakukan secara paralel dengan pertahanan.</span></div>
+          <div class="sekjen-panel">
+            <div class="sk-stamp">AF</div>
+            <div class="sk-info">
+              <div class="sk-label">Diverifikasi oleh Sekretaris Jenderal</div>
+              <div class="sk-name">Kol. Inf. Ahmad Fauzi, S.E., M.M.</div>
+              <div class="sk-meta">Sekjen Bidang Pertahanan Statis · <span class="sk-nip">NIP 19720508 199903 1 005</span> · <span class="sk-time">14:24</span></div>
+            </div>
+            <div class="sk-verify"><span class="sk-check">✓</span><span class="sk-status">TERVERIFIKASI</span></div>
+          </div>
+        </div>
+
+        <!-- BAB VI -->
+        <div class="bab">
+          <div class="bab-label">Bab</div>
+          <div class="bab-num">VI</div>
+          <div class="bab-divider"></div>
+          <div class="bab-title">Protokol Gegas 0.G.9</div>
+        </div>
+
+        <div class="pasal">
+          <div class="pasal-header">
+            <div class="pasal-num">Pasal 27</div>
+            <span class="v-badge"><span class="v-num">v1.2</span><span class="v-status">DIPERBARUI</span><span class="v-time">baru saja</span></span>
+          </div>
+          <div class="pasal-title">Pembatasan Tindakan Gegas</div>
+          <div class="amend-note"><span class="amend-tag">TAMBAH</span><span>14:32 · ayat (4) ditambahkan sesuai UU No. 7/2026</span></div>
+          <div class="ayat"><span class="ayat-num">(1)</span><span>Tindakan gegas dilarang menyasar fasilitas ibadah, rumah sakit, sekolah, dan fasilitas sipil.</span></div>
+          <div class="ayat"><span class="ayat-num">(2)</span><span>Penangkapan wajib mengikuti prosedur hukum yang berlaku.</span></div>
+          <div class="ayat"><span class="ayat-num">(3)</span><span>Penyiksaan dan eksekusi di luar proses hukum dilarang keras tanpa kecuali.</span></div>
+          <div class="ayat"><span class="ayat-num">(4)</span><span>Anak-anak, perempuan hamil, dan kelompok rentan wajib mendapat perlindungan khusus.</span></div>
+          <div class="sekjen-panel">
+            <div class="sk-stamp">SH</div>
+            <div class="sk-info">
+              <div class="sk-label">Diverifikasi oleh Sekretaris Jenderal</div>
+              <div class="sk-name">Brigjen TNI Dr. Siti Hartati, S.H., M.Si.</div>
+              <div class="sk-meta">Sekjen Bidang Tindakan Tegas · <span class="sk-nip">NIP 19740815 200003 1 004</span> · <span class="sk-time">14:32</span></div>
+            </div>
+            <div class="sk-verify"><span class="sk-check">✓</span><span class="sk-status">TERVERIFIKASI</span></div>
+          </div>
+        </div>
+
+        <!-- BAB VII -->
+        <div class="bab">
+          <div class="bab-label">Bab</div>
+          <div class="bab-num">VII</div>
+          <div class="bab-divider"></div>
+          <div class="bab-title">Gencatan Senjata</div>
+        </div>
+
+        <div class="pasal">
+          <div class="pasal-header">
+            <div class="pasal-num">Pasal 32</div>
+            <span class="v-badge"><span class="v-num">v0.9</span><span class="v-status" style="color:var(--s-review);">DALAM PENINJAUAN</span><span class="v-time">sejak 13:50</span></span>
+          </div>
+          <div class="pasal-title">Pelanggaran Gencatan Senjata</div>
+          <div class="amend-note" style="border-left-color:var(--s-review);"><span class="amend-tag" style="background:var(--s-review);">TINJAU</span><span>13:50 · Pasal ini sedang dievaluasi oleh Dewan Militer</span></div>
+          <div class="ayat"><span class="ayat-num">(1)</span><span>Pelanggaran gencatan senjata dikategorikan menjadi: <b>ringan</b>, <b>berat</b>, dan <b>berat dengan akibat</b>.</span></div>
+          <div class="ayat"><span class="ayat-num">(2)</span><span>Pelanggaran ringan diberi peringatan tertulis dan jangka waktu perbaikan 24 jam.</span></div>
+          <div class="ayat"><span class="ayat-num">(3)</span><span>Pelanggaran berat mengakibatkan pembekuan posisi dan investigasi.</span></div>
+          <div class="ayat"><span class="ayat-num">(4)</span><span>Pelanggaran berat dengan akibat dapat menyebabkan eskalasi kembali ke status aktif konflik.</span></div>
+          <div class="sekjen-panel">
+            <div class="sk-stamp">PW</div>
+            <div class="sk-info">
+              <div class="sk-label">Diverifikasi oleh Sekretaris Jenderal</div>
+              <div class="sk-name">Col. (Dr.) R. Prabowo Wibowo, S.H., LL.M.</div>
+              <div class="sk-meta">Sekjen Bidang Hukum Kemanusiaan · <span class="sk-nip">NIP 19700620 199703 1 002</span> · <span class="sk-time" style="color:var(--s-review);">13:50 · tinjau</span></div>
+            </div>
+            <div class="sk-verify"><span class="sk-check" style="color:var(--s-review);">⊙</span><span class="sk-status" style="color:var(--s-review);">DALAM TINJAU</span></div>
+          </div>
+        </div>
+
+        <!-- BAB XII -->
+        <div class="bab">
+          <div class="bab-label">Bab</div>
+          <div class="bab-num">XII</div>
+          <div class="bab-divider"></div>
+          <div class="bab-title">Sistem Pemeliharaan Tingkatan Nasionalisme</div>
+        </div>
+
+        <div class="pasal">
+          <div class="pasal-header">
+            <div class="pasal-num">Pasal 42</div>
+            <span class="v-badge"><span class="v-num">v1.0</span><span class="v-status">DISAHKAN</span><span class="v-time">06.06.2026</span></span>
+          </div>
+          <div class="pasal-title">Ketentuan Umum SPTN</div>
+          <div class="ayat"><span class="ayat-num">(1)</span><span>SPTN adalah kerangka evaluasi kesadaran berbangsa dan bernegara yang diterapkan secara bertingkat kepada setiap warga negara.</span></div>
+          <div class="ayat"><span class="ayat-num">(2)</span><span>SPTN terdiri dari lima tingkatan: Dasar, Warga Negara, Patriotik, Bela Negara, dan Total.</span></div>
+          <div class="ayat"><span class="ayat-num">(3)</span><span>Setiap warga negara wajib lulus Tingkat I dan II sebagai prasyarat dasar kewarganegaraan.</span></div>
+          <div class="ayat"><span class="ayat-num">(4)</span><span>Pengukuran dilakukan oleh Lembaga Pengukuran Nasionalisme (LPN) yang dibentuk oleh Menteri Dalam Negeri.</span></div>
+          <div class="ayat"><span class="ayat-num">(5)</span><span>Sertifikat berlaku 5 tahun untuk Tingkat I–III dan 2 tahun untuk Tingkat IV–V.</span></div>
+          <div class="ayat"><span class="ayat-num">(6)</span><span>Sertifikat menjadi syarat pengangkatan ASN, TNI/Polri, jabatan publik, dan beasiswa negara.</span></div>
+          <div class="ayat"><span class="ayat-num">(7)</span><span>Ketentuan lebih lanjut diatur dalam Peraturan Menteri Dalam Negeri.</span></div>
+          <div class="sekjen-panel">
+            <div class="sk-stamp">US</div>
+            <div class="sk-info">
+              <div class="sk-label">Diverifikasi oleh Sekretaris Jenderal</div>
+              <div class="sk-name">Kol. (Czi) Untung Suryaatmaja, M.Si.</div>
+              <div class="sk-meta">Sekjen Bidang Nasionalisme · <span class="sk-nip">NIP 19650810 199003 1 006</span> · <span class="sk-time">06.06.2026</span></div>
+            </div>
+            <div class="sk-verify"><span class="sk-check">✓</span><span class="sk-status">TERVERIFIKASI</span></div>
+          </div>
+        </div>
+
+        <!-- BAB XIII -->
+        <div class="bab">
+          <div class="bab-label">Bab</div>
+          <div class="bab-num">XIII</div>
+          <div class="bab-divider"></div>
+          <div class="bab-title">Pertahanan Negara</div>
+        </div>
+
+        <div class="pasal">
+          <div class="pasal-header">
+            <div class="pasal-num">Pasal 53</div>
+            <span class="v-badge"><span class="v-num">v1.0</span><span class="v-status">DISAHKAN</span><span class="v-time">06.06.2026</span></span>
+          </div>
+          <div class="pasal-title">Doktrin Pertahanan Negara</div>
+          <div class="ayat"><span class="ayat-num">(1)</span><span>Doktrin Pertahanan Negara adalah kerangka konseptual yang menetapkan arah dan strategi pertahanan negara.</span></div>
+          <div class="ayat"><span class="ayat-num">(2)</span><span>Berlandaskan pada Pancasila, UUD 1945, Wawasan Nusantara, dan Ketahanan Nasional.</span></div>
+          <div class="ayat"><span class="ayat-num">(3)</span><span>Ditetapkan oleh Presiden atas usul Panglima TNI.</span></div>
+          <div class="ayat"><span class="ayat-num">(4)</span><span>Pembaruan doktrin dilakukan sekurang-kurangnya sekali dalam 5 tahun.</span></div>
+          <div class="ayat"><span class="ayat-num">(5)</span><span>Dasar hukum: UU No. 3 Tahun 2002; UU No. 34 Tahun 2004.</span></div>
+          <div class="sekjen-panel">
+            <div class="sk-stamp">PT</div>
+            <div class="sk-info">
+              <div class="sk-label">Diverifikasi oleh Sekretaris Jenderal</div>
+              <div class="sk-name">Letjen TNI Drs. Pratomo Hartono, M.Si.</div>
+              <div class="sk-meta">Sekjen Bidang Pertahanan · <span class="sk-nip">NIP 19620815 198803 1 007</span> · <span class="sk-time">06.06.2026</span></div>
+            </div>
+            <div class="sk-verify"><span class="sk-check">✓</span><span class="sk-status">TERVERIFIKASI</span></div>
+          </div>
+        </div>
+
+        <!-- BAB XI -->
+        <div class="bab">
+          <div class="bab-label">Bab</div>
+          <div class="bab-num">XI</div>
+          <div class="bab-divider"></div>
+          <div class="bab-title">Ketentuan Penutup</div>
+        </div>
+
+        <div class="pasal">
+          <div class="pasal-header">
+            <div class="pasal-num">Pasal 41</div>
+            <span class="v-badge"><span class="v-num">v1.0</span><span class="v-status">DISAHKAN</span><span class="v-time">06.06.2026</span></span>
+          </div>
+          <div class="ayat"><span class="ayat-num">(1)</span><span>Undang-Undang ini mulai berlaku pada tanggal diundangkan.</span></div>
+          <div class="ayat"><span class="ayat-num">(2)</span><span>Diperbarui secara berkelanjutan oleh Sekretariat Negara.</span></div>
+          <div class="ayat"><span class="ayat-num">(3)</span><span>Setiap pembaruan wajib dicatat dalam arsip amandemen.</span></div>
+          <div class="ayat"><span class="ayat-num">(4)</span><span>Versi dokumen dapat diakses publik secara real-time.</span></div>
+          <div class="sekjen-panel">
+            <div class="sk-stamp">SS</div>
+            <div class="sk-info">
+              <div class="sk-label">Diverifikasi oleh Sekretaris Jenderal</div>
+              <div class="sk-name">Drs. H. Soeprapto Sukardi, M.Si.</div>
+              <div class="sk-meta">Sekjen Utama · <span class="sk-nip">NIP 19551221 198203 1 001</span> · <span class="sk-time">06.06.2026</span></div>
+            </div>
+            <div class="sk-verify"><span class="sk-check">✓</span><span class="sk-status">TERVERIFIKASI</span></div>
+          </div>
+        </div>
+
+        <!-- Footer halaman -->
+        <div class="mt-8 pt-4 border-t border-[#6b1a1a]/20 flex justify-between text-[9px] font-mono text-[#837155] uppercase tracking-widest flex-wrap gap-2">
+          <span>Halaman 1 dari 15</span>
+          <span>UU No. 6 / 2026 · v4.2.1</span>
+          <span>© 2026 · LN-069</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="md:col-span-1">
+      <div class="space-y-4 md:sticky md:top-4">
+
+        <!-- Status -->
+        <div class="sidebar-card p-3">
+          <div class="sidebar-title">Status Dokumen</div>
+          <div class="stat-row"><span class="stat-label">Versi</span><span class="stat-val">4.2.1</span></div>
+          <div class="stat-row"><span class="stat-label">Total Pasal</span><span class="stat-val">64</span></div>
+          <div class="stat-row"><span class="stat-label">Total BAB</span><span class="stat-val">15</span></div>
+          <div class="stat-row"><span class="stat-label">Total Sekjen</span><span class="stat-val">10</span></div>
+          <div class="stat-row"><span class="stat-label">Build</span><span class="stat-val">2026.06.06</span></div>
+        </div>
+
+        <!-- Roster Sekjen -->
+        <div class="sidebar-card p-3">
+          <div class="sidebar-title">Roster Sekjen</div>
+          <div class="sk-roster-item"><div class="sk-roster-stamp">SS</div><div><div class="sk-roster-name">Soeprapto Sukardi</div><div class="sk-roster-role">Sekjen Utama</div></div></div>
+          <div class="sk-roster-item"><div class="sk-roster-stamp">BS</div><div><div class="sk-roster-name">Bambang Sutrisno</div><div class="sk-roster-role">Sekjen Taktis</div></div></div>
+          <div class="sk-roster-item"><div class="sk-roster-stamp">HW</div><div><div class="sk-roster-name">Hendra Wijaya</div><div class="sk-roster-role">Sekjen Strategis</div></div></div>
+          <div class="sk-roster-item"><div class="sk-roster-stamp">AF</div><div><div class="sk-roster-name">Ahmad Fauzi</div><div class="sk-roster-role">Sekjen Pertahanan Statis</div></div></div>
+          <div class="sk-roster-item"><div class="sk-roster-stamp">SH</div><div><div class="sk-roster-name">Siti Hartati</div><div class="sk-roster-role">Sekjen Tindakan Tegas</div></div></div>
+          <div class="sk-roster-item"><div class="sk-roster-stamp">PW</div><div><div class="sk-roster-name">Prabowo Wibowo</div><div class="sk-roster-role">Sekjen Hukum Kemanusiaan</div></div></div>
+          <div class="sk-roster-item"><div class="sk-roster-stamp">US</div><div><div class="sk-roster-name">Untung Suryaatmaja</div><div class="sk-roster-role">Sekjen Nasionalisme</div></div></div>
+          <div class="sk-roster-item"><div class="sk-roster-stamp">PT</div><div><div class="sk-roster-name">Pratomo Hartono</div><div class="sk-roster-role">Sekjen Pertahanan</div></div></div>
+          <div class="sk-roster-item"><div class="sk-roster-stamp">GS</div><div><div class="sk-roster-name">Gunawan Subekti</div><div class="sk-roster-role">Sekjen Perkebunan</div></div></div>
+          <div class="sk-roster-item"><div class="sk-roster-stamp">SW</div><div><div class="sk-roster-name">Sumardi Wirawan</div><div class="sk-roster-role">Sekjen Perwiraswasta</div></div></div>
+        </div>
+
+        <!-- Protokol -->
+        <div class="sidebar-card p-3">
+          <div class="sidebar-title">Daftar Protokol</div>
+          <div class="stat-row"><span class="stat-label" style="font-family:'Cormorant Garamond',serif;font-size:12px;">0.0.6 Taktis</span><span class="stat-val">BAB III</span></div>
+          <div class="stat-row"><span class="stat-label" style="font-family:'Cormorant Garamond',serif;font-size:12px;">0.6.9 Strategis</span><span class="stat-val">BAB IV</span></div>
+          <div class="stat-row"><span class="stat-label" style="font-family:'Cormorant Garamond',serif;font-size:12px;">0.K.7 Kubu</span><span class="stat-val">BAB V</span></div>
+          <div class="stat-row"><span class="stat-label" style="font-family:'Cormorant Garamond',serif;font-size:12px;">0.G.9 Gegas</span><span class="stat-val">BAB VI</span></div>
+          <div class="stat-row"><span class="stat-label" style="font-family:'Cormorant Garamond',serif;font-size:12px;">Gencatan Senjata</span><span class="stat-val">BAB VII</span></div>
+          <div class="stat-row"><span class="stat-label" style="font-family:'Cormorant Garamond',serif;font-size:12px;">SPTN</span><span class="stat-val">BAB XII</span></div>
+          <div class="stat-row"><span class="stat-label" style="font-family:'Cormorant Garamond',serif;font-size:12px;">Pertahanan</span><span class="stat-val">BAB XIII</span></div>
+        </div>
+
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<!-- Pita bawah -->
+<div class="ribbon-gov-bottom text-[#e9dec6]">
+  <div class="max-w-5xl mx-auto px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px] font-mono tracking-widest uppercase">
+    <span>Sekretariat Negara R.I.</span>
+    <span class="text-[#c9a345]">Dokumen Negara · Sulawesi</span>
+    <span>© 2026 · LN-069 / TLN-5589</span>
+  </div>
+</div>
+
+<script>
+// Reveal animation
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.05 });
+
+document.querySelectorAll('.pasal, .bab, .sekjen-panel, .amend-note, .exec-card, .djuanda-panel').forEach((el, i) => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(15px)';
+  el.style.transition = `opacity 0.7s ease ${i * 0.04}s, transform 0.7s ease ${i * 0.04}s`;
+  io.observe(el);
+});
+</script>
+</body>
+</html>
